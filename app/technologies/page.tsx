@@ -1,5 +1,8 @@
+'use client'
+
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import Image from 'next/image'
 import { 
   Code, 
   Database, 
@@ -187,9 +190,11 @@ const TechnologiesPage = () => {
                     <div key={tech.name} className="tech-card group">
                       <div className="flex items-center space-x-3 mb-3">
                         <div className="w-8 h-8 flex items-center justify-center">
-                          <img 
+                          <Image 
                             src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '')}/${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '')}-original.svg`}
                             alt={tech.name}
+                            width={24}
+                            height={24}
                             className="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
                             onError={(e) => {
                               e.currentTarget.style.display = 'none';
@@ -248,9 +253,11 @@ const TechnologiesPage = () => {
             ].map((tech) => (
               <div key={tech} className="tech-card text-center group">
                 <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
-                  <img 
+                  <Image 
                     src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.toLowerCase().replace(/[^a-z0-9]/g, '')}/${tech.toLowerCase().replace(/[^a-z0-9]/g, '')}-original.svg`}
                     alt={tech}
+                    width={24}
+                    height={24}
                     className="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
                     onError={(e) => {
                       e.currentTarget.style.display = 'none';
