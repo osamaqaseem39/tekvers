@@ -18,7 +18,7 @@ import {
   Trophy,
   Truck,
   MapPin,
-  Route,
+  Navigation,
   BarChart3
 } from 'lucide-react'
 
@@ -40,7 +40,7 @@ const DispatchingSystemPage = () => {
       description: 'GPS-based delivery tracking and live route monitoring with customer updates'
     },
     {
-      icon: <Route className="w-6 h-6" />,
+      icon: <Navigation className="w-6 h-6" />,
       title: 'Fleet & Driver Management',
       description: 'Centralized control of vehicles, drivers, and schedules with performance analytics'
     },
