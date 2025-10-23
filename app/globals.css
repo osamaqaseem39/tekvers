@@ -5,7 +5,7 @@
 
 @layer base {
   body {
-    @apply bg-primary text-text font-secondary;
+    @apply bg-primary text-white font-body;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
   

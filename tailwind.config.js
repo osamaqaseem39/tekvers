@@ -11,7 +11,7 @@ module.exports = {
         primary: '#0D1117',
         accent: '#00FFFF',
         secondary: '#1E1E2F',
-        text: '#E6E6E6',
+        text: '#FFFFFF',
         highlight: {
           from: '#00FFFF',
           to: '#8B5CF6',
@@ -19,7 +19,7 @@ module.exports = {
       },
       fontFamily: {
         'heading': ['Orbitron', 'Poppins', 'sans-serif'],
-        'body': ['Inter', 'DM Sans', 'sans-serif'],
+        'body': ['Jost', 'Inter', 'sans-serif'],
         'secondary': ['Jost', 'Inter', 'sans-serif'],
       },
       animation: {
