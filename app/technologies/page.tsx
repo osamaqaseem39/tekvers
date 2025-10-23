@@ -8,7 +8,20 @@ import {
   Brain, 
   Shield,
   Palette,
-  Settings
+  Settings,
+  Globe,
+  Zap,
+  Server,
+  Cpu,
+  Layers,
+  GitBranch,
+  Terminal,
+  FileText,
+  BarChart3,
+  Lock,
+  Monitor,
+  Smartphone as Mobile,
+  Wrench
 } from 'lucide-react'
 
 const TechnologiesPage = () => {
@@ -18,12 +31,12 @@ const TechnologiesPage = () => {
       title: 'Frontend Development',
       description: 'Modern web technologies for creating responsive and interactive user interfaces.',
       technologies: [
-        { name: 'React.js', description: 'Component-based UI library', proficiency: 95 },
-        { name: 'Next.js', description: 'Full-stack React framework', proficiency: 90 },
-        { name: 'Vue.js', description: 'Progressive JavaScript framework', proficiency: 85 },
-        { name: 'Angular', description: 'TypeScript-based framework', proficiency: 80 },
-        { name: 'Svelte', description: 'Compile-time optimized framework', proficiency: 75 },
-        { name: 'TypeScript', description: 'Typed JavaScript superset', proficiency: 95 }
+        { name: 'React.js', description: 'Component-based UI library', proficiency: 95, icon: Globe },
+        { name: 'Next.js', description: 'Full-stack React framework', proficiency: 90, icon: Zap },
+        { name: 'Vue.js', description: 'Progressive JavaScript framework', proficiency: 85, icon: Code },
+        { name: 'Angular', description: 'TypeScript-based framework', proficiency: 80, icon: Layers },
+        { name: 'Svelte', description: 'Compile-time optimized framework', proficiency: 75, icon: Terminal },
+        { name: 'TypeScript', description: 'Typed JavaScript superset', proficiency: 95, icon: FileText }
       ]
     },
     {
@@ -142,10 +155,10 @@ const TechnologiesPage = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
             <span className="gradient-text">Technologies We Use</span>
           </h1>
-          <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
-            We stay at the forefront of technology, using the latest tools and 
-            frameworks to deliver cutting-edge solutions.
-          </p>
+            <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed font-secondary">
+              We stay at the forefront of technology, using the latest tools and 
+              frameworks to deliver cutting-edge solutions.
+            </p>
         </div>
       </section>
 
@@ -163,7 +176,7 @@ const TechnologiesPage = () => {
                     <h2 className="text-2xl sm:text-3xl font-heading font-bold text-text">
                       {category.title}
                     </h2>
-                    <p className="text-text/70 mt-2">
+                    <p className="text-text/70 mt-2 font-secondary">
                       {category.description}
                     </p>
                   </div>
@@ -172,16 +185,28 @@ const TechnologiesPage = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {category.technologies.map((tech, techIndex) => (
                     <div key={tech.name} className="tech-card group">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-lg font-semibold text-text group-hover:text-accent transition-colors">
-                          {tech.name}
-                        </h3>
-                        <div className="text-sm text-accent font-medium">
-                          {tech.proficiency}%
+                      <div className="flex items-center space-x-3 mb-3">
+                        <div className="w-8 h-8 flex items-center justify-center">
+                          <img 
+                            src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '')}/${tech.name.toLowerCase().replace(/[^a-z0-9]/g, '')}-original.svg`}
+                            alt={tech.name}
+                            className="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+                            onError={(e) => {
+                              e.currentTarget.style.display = 'none';
+                            }}
+                          />
+                        </div>
+                        <div className="flex-1">
+                          <h3 className="text-lg font-semibold text-text group-hover:text-accent transition-colors">
+                            {tech.name}
+                          </h3>
+                          <div className="text-sm text-accent font-medium">
+                            {tech.proficiency}%
+                          </div>
                         </div>
                       </div>
                       
-                      <p className="text-text/70 text-sm mb-4">
+                      <p className="text-text/70 text-sm mb-4 font-secondary">
                         {tech.description}
                       </p>
                       
@@ -222,7 +247,17 @@ const TechnologiesPage = () => {
               'MQTT', 'InfluxDB', 'Grafana', 'Prometheus', 'ELK Stack', 'Kafka'
             ].map((tech) => (
               <div key={tech} className="tech-card text-center group">
-                <div className="text-sm font-semibold text-text group-hover:text-accent transition-colors">
+                <div className="w-8 h-8 mx-auto mb-2 flex items-center justify-center">
+                  <img 
+                    src={`https://cdn.jsdelivr.net/gh/devicons/devicon/icons/${tech.toLowerCase().replace(/[^a-z0-9]/g, '')}/${tech.toLowerCase().replace(/[^a-z0-9]/g, '')}-original.svg`}
+                    alt={tech}
+                    className="w-6 h-6 group-hover:scale-110 transition-transform duration-300"
+                    onError={(e) => {
+                      e.currentTarget.style.display = 'none';
+                    }}
+                  />
+                </div>
+                <div className="text-sm font-semibold text-text group-hover:text-accent transition-colors font-secondary">
                   {tech}
                 </div>
               </div>
