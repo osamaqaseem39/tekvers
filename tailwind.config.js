@@ -20,6 +20,7 @@ module.exports = {
       fontFamily: {
         'heading': ['Orbitron', 'Poppins', 'sans-serif'],
         'body': ['Inter', 'DM Sans', 'sans-serif'],
+        'secondary': ['Jost', 'Inter', 'sans-serif'],
       },
       animation: {
         'gradient': 'gradient 8s linear infinite',
