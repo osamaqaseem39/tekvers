@@ -18,9 +18,9 @@ const jost = Jost({
 })
 
 export const metadata: Metadata = {
-  title: 'TekVers - Expanding the Technology Universe',
-  description: 'Empowering businesses with AI, software, and cloud innovation. TekVers delivers cutting-edge technology solutions across software development, AI, cloud, DevOps, cybersecurity, design, and digital marketing.',
-  keywords: 'software development, AI, cloud computing, DevOps, cybersecurity, web development, mobile apps, machine learning, cloud migration, digital transformation',
+  title: 'TekVerse | AI-Driven Software Development & Digital Marketing Solutions',
+  description: 'TekVerse empowers your business through smart AI, custom software development, and data-driven digital marketing. We build intelligent solutions that help brands grow faster, smarter, and globally.',
+  keywords: 'AI software development, digital marketing, TekVerse, IT solutions, technology company, AI software company, software development agency, digital marketing agency, AI-powered marketing, TekVerse Pakistan, IT company, AI automation, tech solutions, web development, brand growth',
   authors: [{ name: 'TekVers' }],
   creator: 'TekVers',
   publisher: 'TekVers',
@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'TekVers - Expanding the Technology Universe',
-    description: 'Empowering businesses with AI, software, and cloud innovation.',
+    title: 'TekVerse | AI-Driven Software Development & Digital Marketing Solutions',
+    description: 'TekVerse empowers your business through smart AI, custom software development, and data-driven digital marketing.',
     url: 'https://tekvers.com',
     siteName: 'TekVers',
     images: [
@@ -51,8 +51,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'TekVers - Expanding the Technology Universe',
-    description: 'Empowering businesses with AI, software, and cloud innovation.',
+    title: 'TekVerse | AI-Driven Software Development & Digital Marketing Solutions',
+    description: 'TekVerse empowers your business through smart AI, custom software development, and data-driven digital marketing.',
     images: ['/og-image.jpg'],
   },
   robots: {

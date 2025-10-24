@@ -123,11 +123,12 @@ const ServicesPage = () => {
       <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-            <span className="gradient-text">Our Services</span>
+            <span className="gradient-text">Transform Your Ideas into Powerful Digital Solutions</span>
           </h1>
           <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
-            TekVers delivers end-to-end technology services to help businesses 
-            scale intelligently and securely.
+            Discover TekVerse's full range of services — from AI-powered software 
+            development and automation to data-driven digital marketing. We help brands 
+            innovate, grow, and dominate the digital world.
           </p>
         </div>
       </section>

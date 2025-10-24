@@ -36,8 +36,16 @@ const TechnologiesSection = () => {
   ]
 
   return (
-    <section ref={ref} className="py-20 bg-secondary/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-20 bg-secondary/20 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/technologiessection.jpg" 
+          alt="Technologies Section Background" 
+          className="w-full h-full object-cover opacity-10"
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -45,10 +53,11 @@ const TechnologiesSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
-            <span className="gradient-text">Technologies We Use</span>
+            <span className="gradient-text">End-to-End IT Solutions</span>
           </h2>
           <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
-            We stay at the forefront of technology, using the latest tools and 
+            From concept to deployment — we craft reliable and future-ready tech 
+            experiences. We stay at the forefront of technology, using the latest tools and 
             frameworks to deliver cutting-edge solutions.
           </p>
         </motion.div>

@@ -18,9 +18,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        'heading': ['Orbitron', 'Poppins', 'sans-serif'],
-        'body': ['Jost', 'Inter', 'sans-serif'],
-        'secondary': ['Jost', 'Inter', 'sans-serif'],
+        'heading': ['Jost', 'system-ui', 'sans-serif'],
+        'body': ['Jost', 'system-ui', 'sans-serif'],
+        'secondary': ['Jost', 'system-ui', 'sans-serif'],
       },
       animation: {
         'gradient': 'gradient 8s linear infinite',

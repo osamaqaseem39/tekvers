@@ -106,8 +106,16 @@ const PortfolioSection = () => {
   }
 
   return (
-    <section ref={ref} className="py-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-20 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/portfoliosection.jpg" 
+          alt="Portfolio Section Background" 
+          className="w-full h-full object-cover opacity-10"
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}

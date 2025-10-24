@@ -33,8 +33,16 @@ const AboutSection = () => {
   ]
 
   return (
-    <section ref={ref} className="py-20 bg-secondary/20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section ref={ref} className="py-20 bg-secondary/20 relative">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/aboutsection.jpg" 
+          alt="About Section Background" 
+          className="w-full h-full object-cover opacity-10"
+        />
+      </div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -42,12 +50,12 @@ const AboutSection = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-heading font-bold mb-6">
-            <span className="gradient-text">About TekVers</span>
+            <span className="gradient-text">Why Choose TekVerse?</span>
           </h2>
           <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
-            TekVers is an emerging global technology company with 10+ satisfied clients, 
-            specializing in futuristic solutions across multiple domains. We combine 
-            cutting-edge technology with innovative thinking to deliver exceptional results.
+            Our team combines innovation, creativity, and analytics to deliver 
+            measurable success. We're trusted by startups and enterprises worldwide, 
+            with certified AI and marketing professionals providing 24/7 customer support and maintenance.
           </p>
         </motion.div>
 

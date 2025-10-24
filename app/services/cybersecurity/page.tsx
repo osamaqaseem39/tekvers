@@ -100,8 +100,17 @@ const CybersecurityPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20 relative">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/cybersecurity.jpg" 
+            alt="Cybersecurity Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-2 mb-6">

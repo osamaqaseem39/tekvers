@@ -109,8 +109,17 @@ const BlogPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20 relative">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/blogpage.jpg" 
+            alt="Blog Page Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
             <span className="gradient-text">Our Blog</span>
           </h1>

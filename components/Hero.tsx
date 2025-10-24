@@ -7,9 +7,17 @@ import { ArrowRight, Sparkles, Zap } from 'lucide-react'
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/images/herosection.jpg" 
+          alt="Hero Background" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary" />
+      </div>
       {/* Animated Background */}
       <div className="absolute inset-0 particle-bg" />
-      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary" />
       
       {/* Floating Elements */}
       <div className="absolute top-20 left-10 w-20 h-20 bg-accent/10 rounded-full blur-xl animate-float" />
@@ -41,9 +49,9 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold leading-tight"
           >
-            <span className="gradient-text">Expanding the</span>
+            <span className="gradient-text">Innovate. Automate. Dominate</span>
             <br />
-            <span className="text-text">Technology Universe</span>
+            <span className="text-text">with TekVerse</span>
           </motion.h1>
 
           {/* Subheading */}
@@ -53,8 +61,8 @@ const Hero = () => {
             transition={{ delay: 0.6, duration: 0.8 }}
             className="text-xl sm:text-2xl text-text/80 max-w-3xl mx-auto leading-relaxed"
           >
-            Empowering businesses with AI, software, and cloud innovation. 
-            We deliver cutting-edge technology solutions that scale.
+            TekVerse empowers your business through smart AI, custom software development, 
+            and data-driven digital marketing. We build intelligent solutions that help brands grow faster, smarter, and globally.
           </motion.p>
 
           {/* CTA Buttons */}

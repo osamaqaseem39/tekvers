@@ -98,14 +98,24 @@ const ContactPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20 relative">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/images/contactpage.jpg" 
+            alt="Contact Page Background" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary" />
+        </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-            <span className="gradient-text">Let's Collaborate</span>
+            <span className="gradient-text">Let's Start Your Next Big Digital Project with TekVerse</span>
           </h1>
           <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
-            Ready to expand your universe? Let's discuss your project and create 
-            something amazing together.
+            At TekVerse, we believe great ideas begin with a conversation. Tell us about your 
+            project, challenges, or goals — our AI and digital experts will craft a solution 
+            tailored to you. Let's innovate together and turn your vision into reality.
           </p>
         </div>
       </section>
@@ -117,10 +127,11 @@ const ContactPage = () => {
             {/* Contact Form */}
             <div>
               <h2 className="text-3xl font-heading font-bold mb-6">
-                <span className="gradient-text">Get in Touch</span>
+                <span className="gradient-text">We'd Love to Hear from You</span>
               </h2>
               <p className="text-text/80 mb-8">
-                Fill out the form below and we'll get back to you within 24 hours.
+                Have a question about our AI solutions or marketing services? Our 
+                team is just a message away. Quick response within 24 hours.
               </p>
 
               {isSubmitted ? (
@@ -245,7 +256,12 @@ const ContactPage = () => {
                 <span className="gradient-text">Contact Information</span>
               </h2>
               <p className="text-text/80 mb-8">
-                We're here to help. Reach out to us through any of these channels.
+                📍 Head Office: Global Remote<br />
+                📧 Email: info@tekverse.com<br />
+                📞 Phone: +92 300 1231230<br />
+                <br />
+                <strong>Business Hours:</strong><br />
+                Monday – Friday: 9 AM – 6 PM PKT
               </p>
 
               <div className="space-y-6 mb-8">
