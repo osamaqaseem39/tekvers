@@ -1,0 +1,10 @@
+[33mc6f6e37[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m Add technology logos and implement Jost font throughout Technologies page
+[33m83a85cb[m Add technology logos and implement Jost font throughout Technologies page
+[33mf68461e[m Add technology logos and implement Jost font throughout Technologies page
+[33m5b6cad0[m Add technology logos and implement Jost font throughout Technologies page
+[33mc78865b[m Add technology logos and implement Jost font throughout Technologies page
+[33mc512b49[m Fix build error: Convert technologies page to client component and use Next.js Image
+[33m7c4d0a9[m Fix font to Jost and change text color to white
+[33m84ff11c[m Add technology logos and implement Jost font throughout Technologies page
+[33m4fccdb4[m Add Jost font for secondary text throughout the website
+[33m95f7e34[m Fix: Resolve build errors - CSS border class and Next.js config

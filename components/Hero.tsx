@@ -19,97 +19,95 @@ const Hero = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           {/* Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="space-y-8"
+          >
+            {/* Badge */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center space-x-2 bg-secondary/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2"
+            >
+              <Sparkles className="w-4 h-4 text-accent" />
+              <span className="text-sm text-text">Technology Universe</span>
+            </motion.div>
+
+            {/* Main Heading */}
+            <motion.h1
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.4, duration: 0.8 }}
+              className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold leading-tight"
+            >
+              <span className="gradient-text">Innovate. Automate. Dominate</span>
+              <br />
+              <span className="text-text">with TekVerse</span>
+            </motion.h1>
+
+            {/* Subheading */}
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.6, duration: 0.8 }}
+              className="text-xl sm:text-2xl text-text/80 max-w-3xl mx-auto leading-relaxed"
+            >
+              TekVerse empowers your business through smart AI, custom software development, 
+              and data-driven digital marketing. We build intelligent solutions that help brands grow faster, smarter, and globally.
+            </motion.p>
+
+            {/* CTA Buttons */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="space-y-8"
+              transition={{ delay: 0.8, duration: 0.8 }}
+              className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
             >
-              {/* Badge */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ delay: 0.2, duration: 0.6 }}
-                className="inline-flex items-center space-x-2 bg-secondary/50 backdrop-blur-sm border border-accent/20 rounded-full px-4 py-2"
+              <Link
+                href="/services"
+                className="group relative px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
               >
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span className="text-sm text-text">Technology Universe</span>
-              </motion.div>
-
-              {/* Main Heading */}
-              <motion.h1
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.4, duration: 0.8 }}
-                className="text-4xl sm:text-5xl lg:text-7xl font-heading font-bold leading-tight"
+                <span className="flex items-center space-x-2">
+                  <span>Explore Services</span>
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </span>
+              </Link>
+              
+              <Link
+                href="/portfolio"
+                className="group px-8 py-4 border-2 border-accent/30 text-accent font-semibold rounded-lg hover:border-accent hover:bg-accent/10 transition-all duration-300 transform hover:scale-105"
               >
-                <span className="gradient-text">Innovate. Automate. Dominate</span>
-                <br />
-                <span className="text-text">with TekVerse</span>
-              </motion.h1>
-
-              {/* Subheading */}
-              <motion.p
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.6, duration: 0.8 }}
-                className="text-xl sm:text-2xl text-text/80 max-w-3xl mx-auto leading-relaxed"
-              >
-                TekVerse empowers your business through smart AI, custom software development, 
-                and data-driven digital marketing. We build intelligent solutions that help brands grow faster, smarter, and globally.
-              </motion.p>
-
-              {/* CTA Buttons */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.8, duration: 0.8 }}
-                className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
-              >
-                <Link
-                  href="/services"
-                  className="group relative px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
-                >
-                  <span className="flex items-center space-x-2">
-                    <span>Explore Services</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                  </span>
-                </Link>
-                
-                <Link
-                  href="/portfolio"
-                  className="group px-8 py-4 border-2 border-accent/30 text-accent font-semibold rounded-lg hover:border-accent hover:bg-accent/10 transition-all duration-300 transform hover:scale-105"
-                >
-                  <span className="flex items-center space-x-2">
-                    <Zap className="w-5 h-5" />
-                    <span>View Portfolio</span>
-                  </span>
-                </Link>
-              </motion.div>
-
-              {/* Stats */}
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 1, duration: 0.8 }}
-                className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto pt-16"
-              >
-                <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">10+</div>
-                  <div className="text-text/60">Happy Clients</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">50+</div>
-                  <div className="text-text/60">Projects Delivered</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-3xl font-bold gradient-text">24/7</div>
-                  <div className="text-text/60">Support Available</div>
-                </div>
-              </motion.div>
+                <span className="flex items-center space-x-2">
+                  <Zap className="w-5 h-5" />
+                  <span>View Portfolio</span>
+                </span>
+              </Link>
             </motion.div>
-          </div>
 
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 1, duration: 0.8 }}
+              className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto pt-16"
+            >
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">10+</div>
+                <div className="text-text/60">Happy Clients</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">50+</div>
+                <div className="text-text/60">Projects Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold gradient-text">24/7</div>
+                <div className="text-text/60">Support Available</div>
+              </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
 

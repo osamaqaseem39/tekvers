@@ -18,7 +18,7 @@ module.exports = {
         },
       },
       fontFamily: {
-        'heading': ['Jost', 'system-ui', 'sans-serif'],
+        'heading': ['Orbitron', 'system-ui', 'sans-serif'],
         'body': ['Jost', 'system-ui', 'sans-serif'],
         'secondary': ['Jost', 'system-ui', 'sans-serif'],
       },
