@@ -112,47 +112,31 @@ const TestimonialsSection = () => {
           ))}
         </div>
 
-        {/* Stats Section with Image */}
+        {/* Stats Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.8, duration: 0.8 }}
           className="mt-20"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-6">
-                Our Impact in Numbers
-              </h3>
-              <p className="text-lg text-text/80 mb-8">
-                These numbers reflect our commitment to excellence and the trust 
-                our clients place in our solutions.
-              </p>
-              <div className="grid grid-cols-2 gap-8">
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">100%</div>
-                  <div className="text-text/60">Client Satisfaction</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">50+</div>
-                  <div className="text-text/60">Projects Completed</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">10+</div>
-                  <div className="text-text/60">Happy Clients</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
-                  <div className="text-text/60">Support Available</div>
-                </div>
+          <div className="bg-gradient-to-r from-accent/10 to-purple-500/10 rounded-2xl p-8 lg:p-12 border border-accent/20">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+              <div>
+                <div className="text-3xl font-bold gradient-text mb-2">100%</div>
+                <div className="text-text/60">Client Satisfaction</div>
               </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="/images/testimonialssection.jpg" 
-                alt="TekVerse Client Success" 
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
+              <div>
+                <div className="text-3xl font-bold gradient-text mb-2">50+</div>
+                <div className="text-text/60">Projects Completed</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold gradient-text mb-2">10+</div>
+                <div className="text-text/60">Happy Clients</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold gradient-text mb-2">24/7</div>
+                <div className="text-text/60">Support Available</div>
+              </div>
             </div>
           </div>
         </motion.div>

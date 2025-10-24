@@ -140,11 +140,24 @@ const AIMLPage = () => {
             </div>
             
             <div className="relative">
-              <img 
-                src="/images/aiml.jpg" 
-                alt="AI/ML Solutions" 
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
+              <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-accent/20">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="bg-secondary/50 rounded-lg p-4">
+                    <div className="text-accent text-sm font-mono">
+                      <div className="mb-2"># AI & Machine Learning</div>
+                      <div className="text-text/60">model = NeuralNetwork()</div>
+                      <div className="text-text/60">model.train(data)</div>
+                      <div className="text-text/60">predictions = model.predict()</div>
+                      <div className="text-accent"># Accuracy: 98.5%</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

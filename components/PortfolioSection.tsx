@@ -30,59 +30,163 @@ const PortfolioSection = () => {
     // Simulate GitHub API call - in production, you'd call the actual GitHub API
     const fetchRepos = async () => {
       try {
-        // Mock data for demonstration
+        // All latest projects from portfolio
         const mockRepos: GitHubRepo[] = [
           {
             id: 1,
-            name: 'AI-Powered E-commerce Platform',
-            description: 'A full-stack e-commerce solution with AI recommendations, real-time analytics, and automated inventory management.',
-            html_url: 'https://github.com/osamaqaseem39/ai-ecommerce',
-            homepage: 'https://ai-ecommerce-demo.vercel.app',
+            name: 'Writer Website',
+            description: 'A professional platform for writers and content creators, designed to showcase portfolios, manage content, and engage clients efficiently.',
+            html_url: 'https://github.com/osamaqaseem39/writer-website',
+            homepage: 'https://writer-website.vercel.app',
             language: 'TypeScript',
-            stargazers_count: 42,
-            forks_count: 18,
-            topics: ['react', 'nodejs', 'ai', 'ecommerce', 'typescript'],
-            created_at: '2024-01-15T10:30:00Z',
-            updated_at: '2024-12-01T14:20:00Z'
+            stargazers_count: 19,
+            forks_count: 8,
+            topics: ['nextjs', 'react', 'typescript', 'tailwind', 'web'],
+            created_at: '2025-02-05T10:30:00Z',
+            updated_at: '2025-02-07T14:20:00Z'
           },
           {
             id: 2,
-            name: 'Cloud-Native Microservices',
-            description: 'Scalable microservices architecture with Docker, Kubernetes, and automated CI/CD pipelines.',
-            html_url: 'https://github.com/osamaqaseem39/cloud-microservices',
-            homepage: '',
-            language: 'Go',
-            stargazers_count: 28,
-            forks_count: 12,
-            topics: ['go', 'docker', 'kubernetes', 'microservices', 'devops'],
-            created_at: '2024-02-20T09:15:00Z',
-            updated_at: '2024-11-28T16:45:00Z'
+            name: 'Taxi Application',
+            description: 'A full-stack taxi booking and management platform designed to provide a seamless experience for riders and drivers with real-time tracking and secure payments.',
+            html_url: 'https://github.com/osamaqaseem39/taxi-application',
+            homepage: 'https://taxi-application.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 26,
+            forks_count: 11,
+            topics: ['react', 'typescript', 'mobile', 'maps', 'redux'],
+            created_at: '2025-01-30T09:15:00Z',
+            updated_at: '2025-02-02T16:45:00Z'
           },
           {
             id: 3,
-            name: 'Machine Learning Dashboard',
-            description: 'Interactive dashboard for ML model training, monitoring, and deployment with real-time metrics.',
-            html_url: 'https://github.com/osamaqaseem39/ml-dashboard',
-            homepage: 'https://ml-dashboard-demo.vercel.app',
-            language: 'Python',
-            stargazers_count: 35,
-            forks_count: 15,
-            topics: ['python', 'tensorflow', 'react', 'dashboard', 'ml'],
-            created_at: '2024-03-10T11:00:00Z',
-            updated_at: '2024-11-25T13:30:00Z'
+            name: 'Table Tennis Backend',
+            description: 'A robust backend API built with Node.js and Express.js for managing table tennis tournaments with player registration and match scheduling.',
+            html_url: 'https://github.com/osamaqaseem39/table-tennis-backend',
+            homepage: 'https://table-tennis-backend.vercel.app',
+            language: 'JavaScript',
+            stargazers_count: 13,
+            forks_count: 5,
+            topics: ['nodejs', 'express', 'mongodb', 'backend', 'api'],
+            created_at: '2025-01-25T11:00:00Z',
+            updated_at: '2025-01-27T13:30:00Z'
           },
           {
             id: 4,
-            name: 'Blockchain Voting System',
-            description: 'Secure, transparent voting system built on Ethereum with smart contracts and Web3 integration.',
-            html_url: 'https://github.com/osamaqaseem39/blockchain-voting',
-            homepage: 'https://voting-dapp.vercel.app',
-            language: 'Solidity',
-            stargazers_count: 19,
+            name: 'Stationary',
+            description: 'A modern e-commerce platform for stationary and office supplies built with Next.js, React, and TypeScript, designed to provide a seamless online shopping experience.',
+            html_url: 'https://github.com/osamaqaseem39/stationary',
+            homepage: 'https://stationary.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 22,
+            forks_count: 10,
+            topics: ['nextjs', 'react', 'typescript', 'ecommerce', 'tailwind'],
+            created_at: '2025-01-20T14:20:00Z',
+            updated_at: '2025-01-22T10:15:00Z'
+          },
+          {
+            id: 5,
+            name: 'POS System',
+            description: 'A comprehensive Point of Sale (POS) system designed for retail businesses to efficiently manage sales, inventory, and customers.',
+            html_url: 'https://github.com/osamaqaseem39/pos-system',
+            homepage: 'https://pos-system.vercel.app',
+            language: 'C#',
+            stargazers_count: 18,
             forks_count: 8,
-            topics: ['solidity', 'ethereum', 'web3', 'blockchain', 'voting'],
-            created_at: '2024-04-05T14:20:00Z',
-            updated_at: '2024-11-20T10:15:00Z'
+            topics: ['aspnet', 'csharp', 'sqlserver', 'enterprise', 'pos'],
+            created_at: '2024-12-30T10:30:00Z',
+            updated_at: '2025-01-02T14:20:00Z'
+          },
+          {
+            id: 6,
+            name: 'Punjab AC',
+            description: 'A modern content management system built with Next.js and TypeScript, designed to help businesses and organizations efficiently create, organize, and publish digital content.',
+            html_url: 'https://github.com/osamaqaseem39/punjab-ac',
+            homepage: 'https://punjab-ac.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 14,
+            forks_count: 6,
+            topics: ['nextjs', 'react', 'typescript', 'cms', 'web'],
+            created_at: '2025-01-05T09:15:00Z',
+            updated_at: '2025-01-07T16:45:00Z'
+          },
+          {
+            id: 7,
+            name: 'Software Company',
+            description: 'A professional website designed for a software company, built with Next.js and TypeScript. The platform showcases company services, portfolio projects, team members, and business information.',
+            html_url: 'https://github.com/osamaqaseem39/software-company',
+            homepage: 'https://software-company.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 16,
+            forks_count: 7,
+            topics: ['nextjs', 'react', 'typescript', 'business', 'web'],
+            created_at: '2025-01-10T11:00:00Z',
+            updated_at: '2025-01-12T13:30:00Z'
+          },
+          {
+            id: 8,
+            name: 'Splendid',
+            description: 'A modern creative agency website built with Next.js and TypeScript, designed to showcase creative services, portfolio projects, and client engagement tools.',
+            html_url: 'https://github.com/osamaqaseem39/splendid',
+            homepage: 'https://splendid.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 20,
+            forks_count: 9,
+            topics: ['nextjs', 'react', 'typescript', 'creative', 'agency'],
+            created_at: '2025-01-15T14:20:00Z',
+            updated_at: '2025-01-17T10:15:00Z'
+          },
+          {
+            id: 9,
+            name: 'Portfolio Website',
+            description: 'A modern and responsive developer portfolio website built to showcase projects, skills, and professional experience with a clean, engaging design.',
+            html_url: 'https://github.com/osamaqaseem39/portfolio-website',
+            homepage: 'https://portfolio-website.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 35,
+            forks_count: 15,
+            topics: ['nextjs', 'react', 'typescript', 'portfolio', 'framer'],
+            created_at: '2024-12-25T10:30:00Z',
+            updated_at: '2024-12-27T14:20:00Z'
+          },
+          {
+            id: 10,
+            name: 'PerkUP',
+            description: 'A multi-platform loyalty and rewards management system built to help businesses create and manage customer engagement programs.',
+            html_url: 'https://github.com/osamaqaseem39/perkup',
+            homepage: 'https://perkup.vercel.app',
+            language: 'C#',
+            stargazers_count: 32,
+            forks_count: 13,
+            topics: ['aspnet', 'csharp', 'loyalty', 'enterprise', 'rewards'],
+            created_at: '2024-12-20T09:15:00Z',
+            updated_at: '2024-12-22T16:45:00Z'
+          },
+          {
+            id: 11,
+            name: 'Payday',
+            description: 'A modern financial services platform designed to provide loan management, financial tools, and business analytics for individuals and enterprises.',
+            html_url: 'https://github.com/osamaqaseem39/payday',
+            homepage: 'https://payday.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 28,
+            forks_count: 11,
+            topics: ['nextjs', 'react', 'typescript', 'finance', 'fintech'],
+            created_at: '2024-12-15T11:00:00Z',
+            updated_at: '2024-12-17T13:30:00Z'
+          },
+          {
+            id: 12,
+            name: 'Paper Company',
+            description: 'A modern industrial platform designed for a paper manufacturing business. It highlights the company\'s products, manufacturing capabilities, and sustainability initiatives.',
+            html_url: 'https://github.com/osamaqaseem39/paper-company',
+            homepage: 'https://paper-company.vercel.app',
+            language: 'TypeScript',
+            stargazers_count: 10,
+            forks_count: 4,
+            topics: ['nextjs', 'react', 'typescript', 'industrial', 'manufacturing'],
+            created_at: '2024-12-10T14:20:00Z',
+            updated_at: '2024-12-12T10:15:00Z'
           }
         ]
         
@@ -226,38 +330,20 @@ const PortfolioSection = () => {
           </div>
         )}
 
-        {/* View All Projects CTA with Image */}
+        {/* View All Projects CTA */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-16"
+          className="text-center mt-16"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-6">
-                Explore Our Portfolio
-              </h3>
-              <p className="text-lg text-text/80 mb-8">
-                Discover our latest projects and innovative solutions that showcase 
-                our technical expertise and creative problem-solving.
-              </p>
-              <Link
-                href="/portfolio"
-                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
-              >
-                <Github className="w-5 h-5" />
-                <span>View All Projects on GitHub</span>
-              </Link>
-            </div>
-            <div className="relative">
-              <img 
-                src="/images/portfoliosection.jpg" 
-                alt="TekVerse Portfolio" 
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
-            </div>
-          </div>
+          <Link
+            href="/portfolio"
+            className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
+          >
+            <Github className="w-5 h-5" />
+            <span>View All Projects on GitHub</span>
+          </Link>
         </motion.div>
       </div>
     </section>

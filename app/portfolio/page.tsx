@@ -657,11 +657,11 @@ const PortfolioPage = () => {
               <div key={project.id} className="tech-card group">
                 {/* Project Image */}
                 <div className="relative mb-6 overflow-hidden rounded-lg">
-                  <img 
-                    src={project.image} 
-                    alt={project.name}
-                    className="w-full h-48 object-cover"
-                  />
+                  <div className="w-full h-48 bg-gradient-to-br from-accent/20 to-purple-500/20 flex items-center justify-center">
+                    <div className="text-4xl font-bold text-accent/50">
+                      {project.name.charAt(0)}
+                    </div>
+                  </div>
                   <div className="absolute top-4 right-4">
                     <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                       project.status === 'Live' 

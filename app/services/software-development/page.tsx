@@ -140,11 +140,25 @@ const SoftwareDevelopmentPage = () => {
             </div>
             
             <div className="relative">
-              <img 
-                src="/images/softwaredevelopment.jpg" 
-                alt="Software Development Solutions" 
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
+              <div className="bg-gradient-to-r from-blue-500/20 to-cyan-500/20 rounded-2xl p-8 border border-accent/20">
+                <div className="space-y-4">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  </div>
+                  <div className="bg-secondary/50 rounded-lg p-4">
+                    <div className="text-accent text-sm font-mono">
+                      <div className="mb-2">// Custom Software Development</div>
+                      <div className="text-text/60">const solution = {`{`}</div>
+                      <div className="text-text/60 ml-4">performance: 'optimized',</div>
+                      <div className="text-text/60 ml-4">security: 'enterprise-grade',</div>
+                      <div className="text-text/60 ml-4">scalability: 'unlimited'</div>
+                      <div className="text-text/60">{`}`}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

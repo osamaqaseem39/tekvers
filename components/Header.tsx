@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X, ChevronDown } from 'lucide-react'
 
@@ -53,13 +54,14 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-r from-accent to-purple-500 rounded-lg flex items-center justify-center">
-              <span className="text-primary font-bold text-lg">T</span>
-            </div>
-            <span className="text-xl font-heading font-bold gradient-text">
-              TekVers
-            </span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="TekVers Logo"
+              width={40}
+              height={40}
+              className="w-10 h-10 object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

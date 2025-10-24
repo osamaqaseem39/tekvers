@@ -120,43 +120,34 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* CTA Section with Image */}
+        {/* CTA Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-16"
+          className="text-center mt-16"
         >
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-6">
-                Ready to expand your universe?
-              </h3>
-              <p className="text-lg text-text/80 mb-8">
-                Let's build your next big thing together. Get a personalized quote 
-                for your project today.
-              </p>
-              <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
-                <Link
-                  href="/contact"
-                  className="px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
-                >
-                  Get a Quote
-                </Link>
-                <Link
-                  href="/portfolio"
-                  className="px-8 py-4 border-2 border-accent/30 text-accent font-semibold rounded-lg hover:border-accent hover:bg-accent/10 transition-all duration-300"
-                >
-                  View Our Work
-                </Link>
-              </div>
-            </div>
-            <div className="relative">
-              <img 
-                src="/images/servicessection.jpg" 
-                alt="TekVerse Services" 
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
+          <div className="bg-gradient-to-r from-accent/10 to-purple-500/10 rounded-2xl p-8 lg:p-12 border border-accent/20">
+            <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-6">
+              Ready to expand your universe?
+            </h3>
+            <p className="text-lg text-text/80 mb-8 max-w-2xl mx-auto">
+              Let's build your next big thing together. Get a personalized quote 
+              for your project today.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+              <Link
+                href="/contact"
+                className="px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
+              >
+                Get a Quote
+              </Link>
+              <Link
+                href="/portfolio"
+                className="px-8 py-4 border-2 border-accent/30 text-accent font-semibold rounded-lg hover:border-accent hover:bg-accent/10 transition-all duration-300"
+              >
+                View Our Work
+              </Link>
             </div>
           </div>
         </motion.div>

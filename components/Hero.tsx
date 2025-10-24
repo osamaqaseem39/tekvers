@@ -17,9 +17,8 @@ const Hero = () => {
       <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-accent/20 rounded-full blur-lg animate-float" style={{ animationDelay: '4s' }} />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="text-center">
           {/* Content */}
-          <div className="text-center lg:text-left">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -111,19 +110,6 @@ const Hero = () => {
             </motion.div>
           </div>
 
-          {/* Hero Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 30 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-            className="relative"
-          >
-            <img 
-              src="/images/herosection.jpg" 
-              alt="TekVerse Technology Solutions" 
-              className="w-full h-auto rounded-2xl shadow-2xl"
-            />
-          </motion.div>
         </div>
       </div>
 

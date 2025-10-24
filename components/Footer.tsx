@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { Github, Instagram, Mail, MapPin, Phone } from 'lucide-react'
 
 const Footer = () => {
@@ -34,13 +35,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 bg-gradient-to-r from-accent to-purple-500 rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-lg">T</span>
-              </div>
-              <span className="text-xl font-heading font-bold gradient-text">
-                TekVers
-              </span>
+            <Link href="/" className="flex items-center mb-6">
+              <Image
+                src="/images/logo.png"
+                alt="TekVers Logo"
+                width={40}
+                height={40}
+                className="w-10 h-10 object-contain"
+              />
             </Link>
             <p className="text-text/80 mb-6 leading-relaxed">
               Expanding the Technology Universe. Empowering businesses with AI, 

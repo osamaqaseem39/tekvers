@@ -110,25 +110,14 @@ const BlogPage = () => {
       
       {/* Hero Section */}
       <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-center lg:text-left">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="gradient-text">Our Blog</span>
-              </h1>
-              <p className="text-xl text-text/80 leading-relaxed">
-                Insights, tutorials, and thought leadership on the latest trends in 
-                technology, software development, and digital innovation.
-              </p>
-            </div>
-            <div className="relative">
-              <img 
-                src="/images/blogpage.jpg" 
-                alt="TekVerse Blog" 
-                className="w-full h-auto rounded-2xl shadow-xl"
-              />
-            </div>
-          </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
+            <span className="gradient-text">Our Blog</span>
+          </h1>
+          <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
+            Insights, tutorials, and thought leadership on the latest trends in 
+            technology, software development, and digital innovation.
+          </p>
         </div>
       </section>
 
