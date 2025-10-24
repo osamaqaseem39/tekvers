@@ -36,16 +36,8 @@ const TechnologiesSection = () => {
   ]
 
   return (
-    <section ref={ref} className="py-20 bg-secondary/20 relative">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src="/images/technologiessection.jpg" 
-          alt="Technologies Section Background" 
-          className="w-full h-full object-cover opacity-10"
-        />
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section ref={ref} className="py-20 bg-secondary/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -94,34 +86,43 @@ const TechnologiesSection = () => {
           ))}
         </div>
 
-        {/* Additional Technologies */}
+        {/* Additional Technologies with Image */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-16 text-center"
+          className="mt-16"
         >
-          <div className="bg-gradient-to-r from-accent/10 to-purple-500/10 rounded-2xl p-8 lg:p-12 border border-accent/20">
-            <h3 className="text-2xl font-heading font-bold mb-6">
-              And Many More...
-            </h3>
-            <p className="text-lg text-text/80 max-w-3xl mx-auto leading-relaxed">
-              Our technology stack is constantly evolving. We work with 50+ technologies 
-              across different domains to ensure we can provide the best solution for 
-              your specific needs.
-            </p>
-            <div className="mt-8 flex flex-wrap justify-center gap-4">
-              {[
-                'GitHub', 'Jira', 'Figma', 'VS Code', 'Postman', 'Selenium', 
-                'Power BI', 'Tableau', 'Stripe', 'HubSpot', 'Zapier', 'Unity'
-              ].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 bg-secondary/30 border border-accent/10 rounded-full text-sm text-text/60 hover:text-accent hover:border-accent/30 transition-all duration-300"
-                >
-                  {tech}
-                </span>
-              ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl font-heading font-bold mb-6">
+                And Many More...
+              </h3>
+              <p className="text-lg text-text/80 leading-relaxed mb-8">
+                Our technology stack is constantly evolving. We work with 50+ technologies 
+                across different domains to ensure we can provide the best solution for 
+                your specific needs.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                {[
+                  'GitHub', 'Jira', 'Figma', 'VS Code', 'Postman', 'Selenium', 
+                  'Power BI', 'Tableau', 'Stripe', 'HubSpot', 'Zapier', 'Unity'
+                ].map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-4 py-2 bg-secondary/30 border border-accent/10 rounded-full text-sm text-text/60 hover:text-accent hover:border-accent/30 transition-all duration-300"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className="relative">
+              <img 
+                src="/images/technologiessection.jpg" 
+                alt="TekVerse Technologies" 
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </motion.div>

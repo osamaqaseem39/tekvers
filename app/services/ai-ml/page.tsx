@@ -100,17 +100,8 @@ const AIMLPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20 relative">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            src="/images/aiml.jpg" 
-            alt="AI/ML Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <div className="flex items-center space-x-2 mb-6">
@@ -149,24 +140,11 @@ const AIMLPage = () => {
             </div>
             
             <div className="relative">
-              <div className="bg-gradient-to-r from-purple-500/20 to-pink-500/20 rounded-2xl p-8 border border-accent/20">
-                <div className="space-y-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-3 h-3 bg-red-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
-                    <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                  </div>
-                  <div className="bg-secondary/50 rounded-lg p-4">
-                    <div className="text-accent text-sm font-mono">
-                      <div className="mb-2"># AI & Machine Learning</div>
-                      <div className="text-text/60">model = NeuralNetwork()</div>
-                      <div className="text-text/60">model.train(data)</div>
-                      <div className="text-text/60">predictions = model.predict()</div>
-                      <div className="text-accent"># Accuracy: 98.5%</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src="/images/aiml.jpg" 
+                alt="AI/ML Solutions" 
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
             </div>
           </div>
         </div>

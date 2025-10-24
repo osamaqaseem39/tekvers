@@ -95,24 +95,26 @@ const AboutPage = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20 relative">
-        {/* Background Image */}
-        <div className="absolute inset-0">
-          <img 
-            src="/images/aboutpage.jpg" 
-            alt="About Page Background" 
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/50 to-primary" />
-        </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-            <span className="gradient-text">About TekVers</span>
-          </h1>
-          <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
-            We are an emerging global technology company with 10+ satisfied clients, 
-            specializing in futuristic solutions across multiple domains.
-          </p>
+      <section className="pt-20 pb-16 bg-gradient-to-b from-primary to-secondary/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
+                <span className="gradient-text">About TekVers</span>
+              </h1>
+              <p className="text-xl text-text/80 leading-relaxed">
+                We are an emerging global technology company with 10+ satisfied clients, 
+                specializing in futuristic solutions across multiple domains.
+              </p>
+            </div>
+            <div className="relative">
+              <img 
+                src="/images/aboutpage.jpg" 
+                alt="About TekVers" 
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
+            </div>
+          </div>
         </div>
       </section>
 

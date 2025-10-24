@@ -33,16 +33,8 @@ const AboutSection = () => {
   ]
 
   return (
-    <section ref={ref} className="py-20 bg-secondary/20 relative">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src="/images/aboutsection.jpg" 
-          alt="About Section Background" 
-          className="w-full h-full object-cover opacity-10"
-        />
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section ref={ref} className="py-20 bg-secondary/20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -78,23 +70,32 @@ const AboutSection = () => {
           ))}
         </div>
 
-        {/* Mission Statement */}
+        {/* Mission Statement with Image */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="mt-20 text-center"
+          className="mt-20"
         >
-          <div className="bg-gradient-to-r from-accent/10 to-purple-500/10 rounded-2xl p-8 lg:p-12 border border-accent/20">
-            <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-6">
-              Our Mission
-            </h3>
-            <p className="text-lg text-text/80 max-w-4xl mx-auto leading-relaxed">
-              To democratize access to cutting-edge technology solutions and empower 
-              businesses of all sizes to compete in the digital age. We believe that 
-              every company deserves access to world-class technology, regardless of 
-              their size or budget.
-            </p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-6">
+                Our Mission
+              </h3>
+              <p className="text-lg text-text/80 leading-relaxed">
+                To democratize access to cutting-edge technology solutions and empower 
+                businesses of all sizes to compete in the digital age. We believe that 
+                every company deserves access to world-class technology, regardless of 
+                their size or budget.
+              </p>
+            </div>
+            <div className="relative">
+              <img 
+                src="/images/aboutsection.jpg" 
+                alt="About TekVerse Mission" 
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
+            </div>
           </div>
         </motion.div>
       </div>

@@ -106,16 +106,8 @@ const PortfolioSection = () => {
   }
 
   return (
-    <section ref={ref} className="py-20 relative">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src="/images/portfoliosection.jpg" 
-          alt="Portfolio Section Background" 
-          className="w-full h-full object-cover opacity-10"
-        />
-      </div>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section ref={ref} className="py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
@@ -234,20 +226,38 @@ const PortfolioSection = () => {
           </div>
         )}
 
-        {/* View All Projects CTA */}
+        {/* View All Projects CTA with Image */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ delay: 0.8, duration: 0.8 }}
-          className="text-center mt-16"
+          className="mt-16"
         >
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
-          >
-            <Github className="w-5 h-5" />
-            <span>View All Projects on GitHub</span>
-          </Link>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="text-center lg:text-left">
+              <h3 className="text-2xl sm:text-3xl font-heading font-bold mb-6">
+                Explore Our Portfolio
+              </h3>
+              <p className="text-lg text-text/80 mb-8">
+                Discover our latest projects and innovative solutions that showcase 
+                our technical expertise and creative problem-solving.
+              </p>
+              <Link
+                href="/portfolio"
+                className="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-accent to-purple-500 text-primary font-semibold rounded-lg hover:shadow-2xl hover:shadow-accent/25 transition-all duration-300 transform hover:scale-105"
+              >
+                <Github className="w-5 h-5" />
+                <span>View All Projects on GitHub</span>
+              </Link>
+            </div>
+            <div className="relative">
+              <img 
+                src="/images/portfoliosection.jpg" 
+                alt="TekVerse Portfolio" 
+                className="w-full h-auto rounded-2xl shadow-xl"
+              />
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
