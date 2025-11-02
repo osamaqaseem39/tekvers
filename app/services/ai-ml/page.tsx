@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { 
   Brain, 
   Bot, 
@@ -12,6 +13,12 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'AI & Machine Learning Solutions | TekVerse – Smart Automation for Businesses',
+  description: 'Empower your business with AI and Machine Learning solutions by TekVerse. Automate processes, analyze data, and make intelligent decisions with cutting-edge technology.',
+  keywords: 'AI and machine learning solutions, artificial intelligence company, machine learning development, AI automation, data science, predictive analytics, NLP solutions, business AI software',
+}
 
 const AIMLPage = () => {
   const features = [
@@ -112,15 +119,14 @@ const AIMLPage = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="gradient-text">Intelligent</span>
+                <span className="gradient-text">Transform Data</span>
                 <br />
-                <span className="text-text">Solutions</span>
+                <span className="text-text">into Intelligence</span>
               </h1>
               
               <p className="text-xl text-text/80 mb-8 leading-relaxed">
-                Harness the power of artificial intelligence and machine learning to 
-                automate processes, gain insights, and create intelligent applications 
-                that drive business growth.
+                TekVerse helps businesses harness AI and Machine Learning to automate 
+                operations, uncover insights, and drive smarter decisions.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
@@ -168,7 +174,7 @@ const AIMLPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">AI Solutions We Build</span>
+              <span className="gradient-text">Predictive Analytics & Automation</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               From predictive models to intelligent automation, we create AI solutions 
@@ -199,7 +205,7 @@ const AIMLPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">AI Technologies We Use</span>
+              <span className="gradient-text">Natural Language Processing (NLP)</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               We work with the latest AI and ML frameworks to deliver cutting-edge solutions.
@@ -242,7 +248,7 @@ const AIMLPage = () => {
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-text">
-                      {step.title}
+                      {step.step === '03' ? 'AI Models | Smart Insights | Decision Support' : step.title}
                     </h3>
                   </div>
                   <p className="text-text/70 leading-relaxed">

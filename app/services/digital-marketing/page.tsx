@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { 
   Megaphone, 
   Search, 
@@ -12,6 +13,12 @@ import {
   CheckCircle,
   TrendingUp
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Digital Marketing Services | TekVerse – Grow Your Brand with Data-Driven Strategy',
+  description: 'Boost your online visibility with TekVerse\'s SEO, PPC, and social media marketing services. We help you attract, engage, and convert customers.',
+  keywords: 'digital marketing services, SEO services, PPC campaigns, social media marketing, online advertising, content marketing, branding strategy, marketing agency Pakistan',
+}
 
 const DigitalMarketingPage = () => {
   const features = [
@@ -112,14 +119,14 @@ const DigitalMarketingPage = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="gradient-text">Grow Your</span>
+                <span className="gradient-text">Marketing That Drives</span>
                 <br />
-                <span className="text-text">Business Online</span>
+                <span className="text-text">Measurable Growth</span>
               </h1>
               
               <p className="text-xl text-text/80 mb-8 leading-relaxed">
-                Drive traffic, generate leads, and increase sales with data-driven 
-                digital marketing strategies that deliver measurable results.
+                TekVerse creates marketing campaigns powered by analytics and creativity. From 
+                SEO to paid ads, we help your business achieve measurable digital success.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
@@ -167,7 +174,7 @@ const DigitalMarketingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Marketing Services We Provide</span>
+              <span className="gradient-text">SEO & Content Strategy</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               Comprehensive digital marketing solutions to grow your business and 
@@ -198,7 +205,7 @@ const DigitalMarketingPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Marketing Tools & Platforms</span>
+              <span className="gradient-text">Social Media & Paid Campaigns</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               We use industry-leading marketing tools and platforms to maximize your results.
@@ -241,7 +248,7 @@ const DigitalMarketingPage = () => {
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-text">
-                      {step.title}
+                      {step.step === '05' ? 'Analytics | Branding | ROI Optimization' : step.title}
                     </h3>
                   </div>
                   <p className="text-text/70 leading-relaxed">

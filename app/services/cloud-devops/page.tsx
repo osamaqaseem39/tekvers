@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { 
   Cloud, 
   Server, 
@@ -12,6 +13,12 @@ import {
   CheckCircle,
   Zap
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Cloud & DevOps Services | TekVerse – Scale Securely & Deploy Faster',
+  description: 'Accelerate your business with TekVerse\'s Cloud and DevOps services. Improve performance, scalability, and deployment speed with modern infrastructure solutions.',
+  keywords: 'cloud and DevOps services, DevOps consulting, cloud migration, CI/CD pipeline, AWS DevOps, Azure cloud services, infrastructure automation, cloud optimization',
+}
 
 const CloudDevOpsPage = () => {
   const features = [
@@ -112,14 +119,14 @@ const CloudDevOpsPage = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="gradient-text">Scalable</span>
+                <span className="gradient-text">Cloud Transformation</span>
                 <br />
-                <span className="text-text">Infrastructure</span>
+                <span className="text-text">& DevOps Integration</span>
               </h1>
               
               <p className="text-xl text-text/80 mb-8 leading-relaxed">
-                Build, deploy, and scale applications with confidence. Our cloud and DevOps 
-                solutions ensure reliability, security, and performance at any scale.
+                TekVerse provides next-generation Cloud and DevOps services to help businesses 
+                achieve flexibility, reliability, and faster product delivery.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
@@ -167,7 +174,7 @@ const CloudDevOpsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">DevOps Solutions We Provide</span>
+              <span className="gradient-text">CI/CD Pipelines & Cloud Migration</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               From cloud migration to automated deployments, we streamline your 
@@ -198,7 +205,7 @@ const CloudDevOpsPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Cloud & DevOps Technologies</span>
+              <span className="gradient-text">Performance Monitoring & Optimization</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               We work with industry-leading cloud platforms and DevOps tools.
@@ -241,7 +248,7 @@ const CloudDevOpsPage = () => {
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-text">
-                      {step.title}
+                      {step.step === '03' ? 'AWS | Azure | Google Cloud' : step.title}
                     </h3>
                   </div>
                   <p className="text-text/70 leading-relaxed">

@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { 
   Shield, 
   Lock, 
@@ -12,6 +13,12 @@ import {
   Zap,
   Target
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Cybersecurity Solutions | TekVerse – Protect Your Business from Threats',
+  description: 'Safeguard your digital assets with TekVerse\'s advanced cybersecurity solutions. We provide protection against data breaches, malware, and cyber attacks.',
+  keywords: 'cybersecurity solutions, cybersecurity services, network security, data protection, information security, penetration testing, threat detection, cyber risk management',
+}
 
 const CybersecurityPage = () => {
   const features = [
@@ -112,15 +119,14 @@ const CybersecurityPage = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="gradient-text">Secure</span>
+                <span className="gradient-text">Advanced Cybersecurity</span>
                 <br />
-                <span className="text-text">Digital Assets</span>
+                <span className="text-text">Solutions</span>
               </h1>
               
               <p className="text-xl text-text/80 mb-8 leading-relaxed">
-                Protect your business from cyber threats with comprehensive security 
-                solutions. We provide end-to-end cybersecurity services to keep your 
-                data and systems safe.
+                TekVerse ensures your business remains secure with proactive threat detection, 
+                vulnerability assessments, and compliance-based security solutions.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
@@ -168,7 +174,7 @@ const CybersecurityPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Security Services We Provide</span>
+              <span className="gradient-text">Risk Assessment & Threat Monitoring</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               Comprehensive cybersecurity solutions to protect your business from 
@@ -199,7 +205,7 @@ const CybersecurityPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Security Tools & Technologies</span>
+              <span className="gradient-text">Data Encryption & Security Compliance</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               We use industry-leading security tools and frameworks to protect your systems.
@@ -242,7 +248,7 @@ const CybersecurityPage = () => {
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-text">
-                      {step.title}
+                      {step.step === '05' ? '24/7 Monitoring | Secure Infrastructure' : step.title}
                     </h3>
                   </div>
                   <p className="text-text/70 leading-relaxed">

@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { 
   Palette, 
   Smartphone, 
@@ -12,6 +13,12 @@ import {
   CheckCircle,
   Star
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'UI/UX Design Services | TekVerse – Crafting User-Centered Digital Experiences',
+  description: 'Deliver beautiful, functional, and user-friendly interfaces with TekVerse UI/UX design services. We combine creativity and usability to drive engagement.',
+  keywords: 'UI/UX design services, user interface design, user experience agency, mobile app UI design, website UX design, wireframing, prototyping, UX research',
+}
 
 const UIUXPage = () => {
   const features = [
@@ -112,14 +119,14 @@ const UIUXPage = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="gradient-text">Beautiful</span>
+                <span className="gradient-text">Design That Inspires</span>
                 <br />
-                <span className="text-text">User Experiences</span>
+                <span className="text-text">and Converts</span>
               </h1>
               
               <p className="text-xl text-text/80 mb-8 leading-relaxed">
-                Create stunning, user-friendly interfaces that engage your audience 
-                and drive business results. We design experiences that users love.
+                At TekVerse, our UI/UX designers craft digital experiences that blend usability and 
+                aesthetics to help businesses connect effectively with users.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
@@ -168,7 +175,7 @@ const UIUXPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Design Services We Provide</span>
+              <span className="gradient-text">User Research & Prototyping</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               From user research to pixel-perfect designs, we create experiences 
@@ -199,7 +206,7 @@ const UIUXPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">Design Tools & Technologies</span>
+              <span className="gradient-text">Responsive & Interactive Design</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               We use industry-leading design tools to create exceptional user experiences.
@@ -242,7 +249,7 @@ const UIUXPage = () => {
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-text">
-                      {step.title}
+                      {step.step === '02' ? 'Brand Identity | Wireframing | User Testing' : step.title}
                     </h3>
                   </div>
                   <p className="text-text/70 leading-relaxed">

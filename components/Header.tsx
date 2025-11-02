@@ -60,7 +60,7 @@ const Header = () => {
               alt="TekVers Logo"
               width={40}
               height={40}
-              className="w-10 h-10 object-contain"
+              className="w-20 h-20 object-contain"
             />
           </Link>
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Inter, Orbitron, Jost } from 'next/font/google'
 import './globals.css'
 
@@ -77,6 +78,18 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${orbitron.variable} ${jost.variable}`}>
       <body className={`${inter.className} antialiased`}>
         {children}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-3PL6FZF2V2"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-3PL6FZF2V2');
+          `}
+        </Script>
       </body>
     </html>
   )

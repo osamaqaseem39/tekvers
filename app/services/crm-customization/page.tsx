@@ -1,6 +1,7 @@
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import { 
   Settings, 
   Users, 
@@ -12,6 +13,12 @@ import {
   CheckCircle,
   Database
 } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'CRM Customization Services | TekVerse – Tailored CRM Solutions for Your Business',
+  description: 'TekVerse customizes CRM platforms to match your workflow. Improve client relationships, sales tracking, and customer retention with personalized CRM systems.',
+  keywords: 'CRM customization services, CRM integration, Salesforce customization, HubSpot setup, Zoho CRM development, CRM automation, customer relationship management, CRM system development',
+}
 
 const CRMCustomizationPage = () => {
   const features = [
@@ -112,14 +119,14 @@ const CRMCustomizationPage = () => {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold mb-6">
-                <span className="gradient-text">Streamline Your</span>
+                <span className="gradient-text">CRM Systems That</span>
                 <br />
-                <span className="text-text">Business Processes</span>
+                <span className="text-text">Work for You</span>
               </h1>
               
               <p className="text-xl text-text/80 mb-8 leading-relaxed">
-                Customize and optimize your CRM system to match your unique business 
-                needs. From Dynamics 365 to GoHighLevel, we make it work for you.
+                TekVerse helps businesses streamline customer management through tailored 
+                CRM systems that enhance automation, sales, and client relationships.
               </p>
               
               <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6">
@@ -167,7 +174,7 @@ const CRMCustomizationPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">CRM Services We Provide</span>
+              <span className="gradient-text">Integration & Automation</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               Comprehensive CRM customization and optimization services to maximize 
@@ -198,7 +205,7 @@ const CRMCustomizationPage = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl sm:text-4xl font-heading font-bold mb-6">
-              <span className="gradient-text">CRM Platforms We Work With</span>
+              <span className="gradient-text">Custom Dashboards & Reporting</span>
             </h2>
             <p className="text-xl text-text/80 max-w-3xl mx-auto leading-relaxed">
               We customize and optimize the most popular CRM and business management platforms.
@@ -241,7 +248,7 @@ const CRMCustomizationPage = () => {
                       {step.step}
                     </div>
                     <h3 className="text-xl font-semibold text-text">
-                      {step.title}
+                      {step.step === '04' ? 'Salesforce | HubSpot | Zoho CRM' : step.title}
                     </h3>
                   </div>
                   <p className="text-text/70 leading-relaxed">
