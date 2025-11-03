@@ -6,19 +6,31 @@ import './globals.css'
 const inter = Inter({ 
   subsets: ['latin'],
   variable: '--font-inter',
+  preload: true,
+  adjustFontFallback: true,
 })
 
 const orbitron = Orbitron({ 
   subsets: ['latin'],
   variable: '--font-orbitron',
+  preload: false, // Only preload primary font
+  adjustFontFallback: true,
 })
 
 const jost = Jost({ 
   subsets: ['latin'],
   variable: '--font-jost',
+  preload: false,
+  adjustFontFallback: true,
 })
 
 export const metadata: Metadata = {
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 5,
+    userScalable: true,
+  },
   title: 'TekVerse | AI-Driven Software Development & Digital Marketing Solutions',
   description: 'TekVerse empowers your business through smart AI, custom software development, and data-driven digital marketing. We build intelligent solutions that help brands grow faster, smarter, and globally.',
   keywords: 'AI software development, digital marketing, TekVerse, IT solutions, technology company, AI software company, software development agency, digital marketing agency, AI-powered marketing, TekVerse Pakistan, IT company, AI automation, tech solutions, web development, brand growth',

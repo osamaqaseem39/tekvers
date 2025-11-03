@@ -12,10 +12,17 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null)
 
   useEffect(() => {
+    let ticking = false
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setIsScrolled(window.scrollY > 20)
+          ticking = false
+        })
+        ticking = true
+      }
     }
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
@@ -58,9 +65,12 @@ const Header = () => {
             <Image
               src="/images/logo.png"
               alt="TekVers Logo"
-              width={40}
-              height={40}
+              width={80}
+              height={80}
               className="w-20 h-20 object-contain"
+              priority
+              quality={75}
+              sizes="(max-width: 768px) 80px, 80px"
             />
           </Link>
 
